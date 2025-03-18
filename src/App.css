@@ -1,0 +1,631 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+
+/* 🌍 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* 🌈 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: linear-gradient(to right, #004aad, #00aaff);
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dot {
+  color: yellow;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-link {
+  margin-right: 10px; /* Adds spacing between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+.btn {
+  background: yellow;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffcc00;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: var(--text-dark);
+}
+
+.header__container .section__header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+.header__container .section__header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Main container */
+
+/* 🌍 Footer */
+.footer {
+  background: linear-gradient(to right, #004aad, #00aaff);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  display: block;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+button[type="submit"] {
+  background: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+button[type="button"] {
+  background: #dc3545;
+  color: white;
+}
+
+button[type="button"]:hover {
+  background: #c82333;
+}
+
+.btn {
+  margin: 3px;
+  padding: 5px;  /* Slightly bigger padding */
+  font-size: 12px; /* Slightly bigger text */
+  border-radius: 3px;  /* Slightly rounded square */
+  cursor: pointer;
+  width: 45px;  /* Increased width */
+  height: 45px; /* Increased height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+}
+
+.btn-primary {
+  background-color: blue;
+  color: white;
+}
+
+.btn-danger {
+  background-color: red;
+  color: white;
+}
+
+/* 🛫 Flight Search Form */
+.flight-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 4px solid #f197c4; Blue border around form */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin: 30px auto;
+}
+
+.flight-search {
+  display: flex;
+  gap: 15px;
+}
+
+.flight-search input {
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #1edfcf; /* Orange border */
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.flight-search input:focus {
+  border-color: #24c7da; /* Yellow border on focus */
+  box-shadow: 0px 0px 10px rgba(78, 161, 190, 0.8);
+}
+
+.flight-search .btn {
+  padding: 10px 20px;
+  background-color: rgb(5, 46, 251);
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.flight-search .btn:hover {
+  background-color: gold;
+  transform: scale(1.05);
+}
+
+/* Flight Details Box */
+
+.flight-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.flight-details {
+  flex: 2;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.flight-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.flight-info {
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Seats Section */
+/* --- Centering Both Legend and Seats --- */
+/* Main container */
+.flight-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 30px;  /* Added gap between Flight Details & Seats */
+}
+
+/* Flight Details (Left Section) */
+.flight-details {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Available Seats (Right Section) */
+.seats-container {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px; /* Added space between flight details & seat table */
+}
+
+/* Seat Legend */
+.legend-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+/* Seat Grid */
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Available & Occupied Seat Styling */
+.available {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.occupied {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+.legend-box.available-box {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* Occupied Seat Box (Red) */
+.legend-box.occupied-box {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+/* Seat Summary Section */
+.seat-summary {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+
+.seat-summary p {
+  margin: 5px 0;
+}
+
+.available:hover {
+  background-color: blue;
+}
+
+
+.selected-seat-container input {
+  width: 200px; /* Adjust for multiple seats */
+  padding: 5px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.selected-seat-container input:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* Modal Styling */
+/* Modal Background */
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Square Form Box */
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 0px; /* Makes it square */
+  width: 350px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Form Title */
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+input, select {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  width: 48%;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* Close Button */
+.close-btn {
+  background: #ff4d4d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  width: 48%;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.close-btn:hover {
+  background: #cc0000;
+}
+
+
+
+
+/* passanger details */
+
+.passenger-details-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.passenger-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.passenger-table th,
+.passenger-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.passenger-table th {
+  background: #f4f4f4;
+}
+
+select {
+  padding: 5px;
+}
+
+.close-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+/* show passanger button */
+
+.show-passenger-btn {
+  display: block;
+  margin-left: auto; /* Pushes button to the right */
+  margin-right: 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.show-passenger-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* show passanger button */
