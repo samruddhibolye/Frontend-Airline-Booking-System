@@ -4,7 +4,7 @@ import { addPassanger, allocateSeat, fetchPassangerById, fetchSeatById } from '.
 import FlightItem from './FlightItem';
 import { getSeatBySeatNumber, updateSeat } from '../Service/SeatService';
 
-function PassangerForm({closeForm,selectedSeat}) {
+function PassangerForm({closeForm,selectedSeat, refreshSeats }) {
      const [showForm, setShowForm] = useState(false);
       const [passanger,setPassanger]=useState({})
       const [seat,setSeat]=useState({})
@@ -15,8 +15,11 @@ function PassangerForm({closeForm,selectedSeat}) {
         gender: "",
         passportNumber: "",
         nationality: "",
+        
 
     });
+
+    
 
     const getSeat=async ()=>{
 
@@ -38,15 +41,20 @@ function PassangerForm({closeForm,selectedSeat}) {
 
     const handleSubmit =async (e) => {
         e.preventDefault();
-        
+        refreshSeats();
         toast.success("passanger Added Successfully")
 
         const passanger = await addPassanger(formData);
 
+        
+
       // Allocate seat to the passenger by passing the passengerId and selectedSeat's seatId
       const seatAllocationResponse = await allocateSeat(passanger, seat._links.self.href);
       console.log(seatAllocationResponse)
+
       const updatedSeat=await updateSeat(seat._links.self.href,{...seat,"occupied":true})
+      refreshSeats();
+
 
 
         console.log("Form submitted", formData);
@@ -65,47 +73,66 @@ function PassangerForm({closeForm,selectedSeat}) {
     
 
     return (
-        <div className="form-modal">
-        <div className="form-container">
-          <h3>Passenger Details</h3>
-          <form onSubmit={handleSubmit}>
-            <div className="form-group">
-              
-              <label>  Name* </label>
-              <input type="text" required 
-              value={formData.passangerName} onChange={handleChange} name='passangerName'/>
-  
-              <label>Age *</label>
-              <input type="number" required 
-              value={formData.age} onChange={handleChange} name='age'/>
-  
-              <label>Gender</label>
-              <select value={formData.gender} onChange={handleChange} name='gender'>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-  
-              <label>Passport Number</label>
-              <input type="text" 
-              value={formData.passportNumber} onChange={handleChange} name='passportNumber'/>
-  
-              <label>Nationality</label>
-              <input type="text" 
-              value={formData.nationality} onChange={handleChange} name='nationality'/>
-            </div>
-  
-            <div className="button-group">
-              <button type="submit" className="submit-btn">Submit</button>
-              <button type="button" className="close-btn" onClick={closeForm}>
-                Close
-              </button>
-            </div>
-          </form>
+      <div className="form-modal">
+     
+
+      <div className="form-container">
+        <div className="toggle-btn-group">
+         
+          
         </div>
-        <ToastContainer/>
+
+        <h3>Enter Passenger Details</h3>
+        <form onSubmit={handleSubmit}>
+          <div className="form-grid">
+            <input
+              type="text"
+              placeholder="Name *"
+              value={formData.passangerName}
+              onChange={handleChange}
+              name="passangerName"
+              required
+            />
+            <input
+              type="number"
+              placeholder="Age *"
+              value={formData.age}
+              onChange={handleChange}
+              name="age"
+              required
+            />
+            <select
+              value={formData.gender}
+              onChange={handleChange}
+              name="gender"
+            >
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <input
+              type="text"
+              placeholder="Passport Number"
+              value={formData.passportNumber}
+              onChange={handleChange}
+              name="passportNumber"
+            />
+            <input
+              type="text"
+              placeholder="Nationality"
+              value={formData.nationality}
+              onChange={handleChange}
+              name="nationality"
+            />
+          </div>
+
+          <div className="button-group">
+            <button type="submit" className="submit-btn">Submit</button>
+            <button type="button" className="close-btn" onClick={closeForm}>Close</button>
+          </div>
+        </form>
       </div>
-           
+    </div>
     )
 }
 

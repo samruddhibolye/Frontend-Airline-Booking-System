@@ -9,7 +9,7 @@ function Navbar() {
       <Link to={"/"}>Home</Link>
       <span style={{ padding: "0 10px" }}></span>
 
-      <li><a href="#about">About</a></li> 
+      <Link >About </Link> 
       <span style={{ padding: "0 10px" }}></span>
 
       <Link to={"/create-flight"}>Add Flights</Link>

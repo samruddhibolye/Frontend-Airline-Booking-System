@@ -4,6 +4,7 @@ import { fetchFlightById, fetchSeatsByFlightId } from '../Service/FlightSerice';
 import logo from '../../image/logo.jpeg';
 import PassangerForm from './PassangerForm';
 import { fetchPassengersByFlight } from '../Service/PassangerService';
+import { updateSeat } from '../Service/SeatService';
 
 function FlightDetails() {
     const { flightId } = useParams();
@@ -13,6 +14,8 @@ function FlightDetails() {
     const [showForm, setShowForm] = useState(false);
     const [passengers, setPassengers] = useState([]);
     const [showPassengerTable, setShowPassengerTable] = useState(false);
+
+    const [formdata,setFormData]=useState([])
 
     useEffect(() => {
         const getFlightByID = async () => {
@@ -24,6 +27,11 @@ function FlightDetails() {
         getFlightByID();
         getSeatById();
     }, [flightId]);
+
+    const refreshSeats = async () => {
+        const updatedSeats = await fetchSeatsByFlightId(flightId);
+        setSeats(updatedSeats);
+    };
 
     useEffect(() => {
         fetchPassengersByFlight(flightId)
@@ -48,6 +56,11 @@ function FlightDetails() {
             setShowForm(true);
         }
     };
+
+
+
+    
+    
 
     return (
         <div className="flight-container">
@@ -80,7 +93,7 @@ function FlightDetails() {
                                 <th scope="col">#</th>
                                 <th scope="col">Seat Number</th>
                                 <th scope="col">Class</th>
-                                <th scope="col">Passenger Name</th>
+                               
                             </tr>
                         </thead>
                         <tbody>
@@ -120,6 +133,7 @@ function FlightDetails() {
                                 key={index} 
                                 className={seat.occupied ? "occupied" : "available"}
                                 onClick={() => handleSeatClick(seat.seatNumber, seat.occupied)}
+                                
                             >
                                 {seat.seatNumber}
                             </div>
@@ -140,7 +154,7 @@ function FlightDetails() {
                     Book Now
                 </button>
 
-                {showForm && <PassangerForm selectedSeat={selectedSeat[0]} closeForm={() => setShowForm(false)} />}
+                {showForm && <PassangerForm selectedSeat={selectedSeat[0]} closeForm={() => setShowForm(false)} refreshSeats={refreshSeats}/>}
             </div>
         </div>
     );

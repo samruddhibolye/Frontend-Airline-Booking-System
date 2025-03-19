@@ -67,4 +67,25 @@ export const allocateSeat = (passangerId, seatLink) => {
     }
 };
 
+
+// count of female
+export const fetchCountOfFemale=async()=>{
+    const response=await fetch(`http://localhost:8080/passangers/search/countByGender?gender=female`)
+    const data=await response.text();
+    return Number(data);
+}
+ 
+
+// count of male
+export const fetchCountOfMale=async()=>{
+    const response=await fetch(`http://localhost:8080/passangers/search/countByGender?gender=male`)
+    const data=await response.text();
+    return Number(data);
+}
+ 
+export const fetchCountOfOther=async()=>{
+    const response=await fetch(`http://localhost:8080/passangers/search/countByGender?gender=Other`)
+    const data=await response.text();
+    return Number(data);
+}
  

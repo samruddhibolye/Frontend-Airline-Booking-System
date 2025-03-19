@@ -11,8 +11,10 @@ function Home() {
       <h1 class="section__header p-4 ">Find And Book<br />A Great Experience</h1>
       <img src={image} alt="header" />
     </header>
-       
+     
   )
+  
 }
-<About/>
-export default Home
+<About/>  
+
+export default Home;

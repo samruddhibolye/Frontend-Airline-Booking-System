@@ -80,13 +80,34 @@ export const fetchSeatsByFlightId = async (flightId) => {
   return data ["_embedded"]["seats"]
 };
 
-// 
+// show occupied seat
 export const fetchOccupiedSeat=async (flightId)=>{
     const response=await fetch(`http://localhost:8080/flights/search/countBySeatsOccupiedTrueAndFlightId?flightId=${flightId}`)
     const data=await response.text()
     console.log("Fetched data")
 
     return data;
+}
+
+// avg price of flight
+export const fetchFlightByAvgPrice=async()=>{
+  const response =await fetch(`http://localhost:8080/flights/search/flightAveragePrice`)
+  const data=await response.text();
+  return Number(data);
+}
+
+// min price of flight
+export const fetchFlightByMinPrice=async()=>{
+  const response=await fetch(`http://localhost:8080/flights/search/findMinPrice`)
+  const data=await response.text();
+  return Number(data);
+}
+
+// max price of flight
+export const fetchFlightByMaxPrice=async()=>{
+  const response=await fetch(`http://localhost:8080/flights/search/findMaxPrice`)
+  const data=await response.text();
+  return Number(data);
 }
 
 
