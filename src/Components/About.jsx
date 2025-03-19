@@ -1,5 +1,5 @@
 import React from 'react';
-import about from '../image/about.jpg';
+import about1 from '../image/about1.jpg';
 
 function About() {
   return (
@@ -7,12 +7,12 @@ function About() {
           <div className="about-container">
             {/* Left Side: Image */}
             <div className="about-image">
-                <img src={about} alt="Airplane Travel" />
+                <img src={about1} alt="Airplane Travel" />
             </div>
 
         {/* Right-side Content */}
         <div class="plan__grid">
-        <div class="plan__content">
+        <div class="plan__grid">
           <span class="number">01</span>
           <h4>Travel Requirements for Dubai</h4>
           <p>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { addFlight } from '../Service/FlightSerice';
 import { ToastContainer, toast } from 'react-toastify';
-import addImge from '../../image/addimge.jpeg'
+import image1 from '../../image/image1.jpg'
 
 
 function AddFlights() {
@@ -39,44 +39,47 @@ function AddFlights() {
     };
 
     return (
-      <div className="form-container">
-            <h2>Add Flight Details</h2>
-            <form onSubmit={handleSubmit}>
-                <label>Departure:</label>
-                <input type="datetime-local" required 
-                    value={formData.depatureTime} onChange={handleChange} name='depatureTime' />
+        <div
+      className="background-container"
+      style={{ backgroundImage: `url(${image1})` }}
+    >
+      <div className="form-overlay">
+        <h2>Add Flight</h2>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Source</label>
+            <input type="text" required value={formData.source} onChange={handleChange} name="source" />
 
-                <label>Arrival:</label>
-                <input type="datetime-local" required 
-                    value={formData.arrivalTime} onChange={handleChange} name='arrivalTime' />
-
-                <label>Source:</label>
-                <input type="text" required 
-                    value={formData.source} onChange={handleChange} name='source' />
-
-                <label>Destination:</label>
-                <input type="text" required 
-                    value={formData.destination} onChange={handleChange} name='destination' />
-
-                <label>Duration:</label>
-                <input type="text" required 
-                    value={formData.duration} onChange={handleChange} name='duration' />
-
-                <label>Status:</label>
-                <input type="text" required 
-                    value={formData.status} onChange={handleChange} name='status' />
-
-                <label>Price:</label>
-                <input type="number" required 
-                    value={formData.price} onChange={handleChange} name='price' />
-                       
-                       
-
-                <button type="submit">Proceed</button>
-                <button type="button">Cancel</button>
-            </form>
-           <ToastContainer/>
-        </div>
+          </div>
+          <div>
+            <label>Destination</label>
+            <input type="text" required value={formData.destination} onChange={handleChange} name="destination" />
+          </div>
+          <div>
+            <label>Depature Time</label>
+            <input type="datetime-local" required value={formData.depatureTime} onChange={handleChange} name="depatureTime" />
+          </div>
+          <div>
+            <label>Arrival Time</label>
+            <input type="datetime-local" required value={formData.arrivalTime} onChange={handleChange} name="arrivalTime" />
+          </div>
+          <div>
+            <label>Status</label>
+            <input type="text" required value={formData.status} onChange={handleChange} name="status" placeholder="On Time / Delayed" />
+          </div>
+          <div>
+            <label>Price</label>
+            <input type="number" required value={formData.price} onChange={handleChange} name="price" placeholder="Enter price" />
+          </div>
+          <div className="full-width">
+            <label>Duration</label>
+            <input type="text" required value={formData.duration} onChange={handleChange} name="duration" placeholder="Enter duration" />
+          </div>
+          <button type="submit">sumbit</button>
+        </form>
+        <ToastContainer/>
+      </div>
+    </div>
     );
 }
 

@@ -80,5 +80,14 @@ export const fetchSeatsByFlightId = async (flightId) => {
   return data ["_embedded"]["seats"]
 };
 
+// 
+export const fetchOccupiedSeat=async (flightId)=>{
+    const response=await fetch(`http://localhost:8080/flights/search/countBySeatsOccupiedTrueAndFlightId?flightId=${flightId}`)
+    const data=await response.text()
+    console.log("Fetched data")
+
+    return data;
+}
+
 
 

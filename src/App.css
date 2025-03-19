@@ -161,7 +161,7 @@ h2 {
   color: #333;
   margin-bottom: 20px;
 }
-
+/*  */
 form {
   display: flex;
   flex-direction: column;
@@ -465,6 +465,7 @@ button:hover:not(:disabled) {
 
 /* Modal Styling */
 /* Modal Background */
+/* passanger form */
 .form-modal {
   position: fixed;
   top: 0;
@@ -564,7 +565,7 @@ input:focus, select:focus {
 
 
 
-/* passanger details */
+/* passanger details form */
 
 .passenger-details-container {
   background: #fff;
@@ -629,3 +630,398 @@ select {
 
 
 /* show passanger button */
+
+
+/* about */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #f0f9ff, #ffffff);
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.plan__grid {
+  flex: 1;
+  max-width: 50%;
+  color: #333;
+}
+
+.plan__content .number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.plan__content h4 {
+  font-size: 22px;
+  color: #023e8a;
+  margin-bottom: 10px;
+}
+
+.plan__content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.plan__content h4:hover {
+  color: #0077b6;
+  cursor: pointer;
+}
+
+.plan__content p::first-letter {
+  font-size: 22px;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-image,
+  .plan__grid {
+    max-width: 100%;
+  }
+
+  .plan__content p {
+    text-align: justify;
+  }
+  .plan__content h4 {
+    transition: all 0.3s ease;
+  }
+  
+}
+
+/* about */
+
+
+/* add flight form */
+.background-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.form-overlay {
+  background: rgba(173, 216, 230, 0.7); /* soft light-blue transparent */
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 600px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-overlay h2 {
+  text-align: center;
+  color: #002f6c;
+  margin-bottom: 25px;
+}
+
+.form-overlay form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-overlay label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #6b6b6b;
+}
+
+.form-overlay input, 
+.form-overlay select {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.full-width {
+  grid-column: 1 / span 2;
+}
+
+.form-overlay button {
+  margin-top: 20px;
+  grid-column: 1 / span 2;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+/* add flight form */
+
+
+
+/* passanger form 2 */
+.form-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 500px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.form-container h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #003366;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #003366;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.submit-btn,
+.close-btn {
+  width: 48%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.submit-btn {
+  background-color: #003366;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #0055a5;
+}
+
+.close-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.close-btn:hover {
+  background-color: #cc0000;
+}
+
+/* passanger form 2*/
+
+
+
+/* flight update form */
+.modal-content {
+  background: linear-gradient(135deg, #f0faff, #ffffff);
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.modal-header {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.modal-title {
+  color: #003366;
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #d0d7e2;
+  padding: 12px 15px;
+  width: 100%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 15px;
+  background-color: #fdfdfd;
+}
+
+.form-control:focus {
+  border-color: #5e9bff;
+  box-shadow: 0 0 10px blue(112, 126, 155, 0.3);
+  outline: none;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #2772d4, #1a67c6);
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 126, 95, 0.4);
+}
+
+.btn-secondary {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4);
+}
+
+.modal-footer {
+  border-top: none;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.modal-dialog {
+  max-width: 600px;
+}
+
+.me-2 {
+  color: #0527d2;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+form {
+  display: grid;
+  gap: 24px;
+}
+
+button:focus {
+  outline: none;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: brightness(0.7);
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  accent-color: #215eb9;
+}
+
+select {
+  border-radius: 10px;
+  padding: 10px 14px;
+  background-color: #fefefe;
+  border: 1px solid #d0d7e2;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #5e9bff;
+  box-shadow: 0 0 10px rgba(94, 155, 255, 0.3);
+}
+
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* tr:hover {
+  background-color: #eef6ff;
+  cursor: pointer;
+} */
+
+/* flight update form */

@@ -10,6 +10,7 @@ import Allflight from './Components/Flights/Allflight';
 import PassangerForm from './Components/Flights/PassangerForm';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
+import FlightBooking from './Components/Flights/FlightBooking';
 
 
 const routes=createBrowserRouter([
@@ -37,6 +38,10 @@ const routes=createBrowserRouter([
           element:<FlightDetails/>
         
       },
+      {
+        path:"/booking-flight",
+        element:<FlightBooking/>
+      }
       
      ]
    

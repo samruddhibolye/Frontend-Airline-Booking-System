@@ -14,8 +14,12 @@ function Navbar() {
 
       <Link to={"/create-flight"}>Add Flights</Link>
       <span style={{ padding: "0 10px" }}></span>
+      
       <Link  to={"/all-flight"} >Flights</Link>
-      <li><a href="#">Booking</a></li>
+      <span style={{ padding: "0 10px" }}></span>
+
+      <Link to={"/booking-flight"}>Booking</Link>
+
       <li><a href="#">Contact</a></li>
     </ul>
     <button className="btn">Book Now</button>

@@ -8,7 +8,7 @@ function Home() {
     
   return (
     <header class="section__container header__container">
-      <h1 class="section__header">Find And Book<br />A Great Experience</h1>
+      <h1 class="section__header p-4 ">Find And Book<br />A Great Experience</h1>
       <img src={image} alt="header" />
     </header>
        
